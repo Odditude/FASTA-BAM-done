@@ -28,3 +28,20 @@ for i, line in enumerate(fp):
 
 fp.close()
 newopen.close()
+
+
+
+
+#=======#
+# Notes #
+#=======#
+
+'''
+To run on multiple files:
+#!/bin/bash
+
+for file in ./path/*.log
+do
+    python Flagstat_fletcher.py $file
+done
+'''
