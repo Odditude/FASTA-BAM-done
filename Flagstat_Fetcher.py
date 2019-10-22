@@ -5,7 +5,7 @@ import sys
 FlagStatFile = sys.argv[1]
 if os.path.isfile('./Collected_flags.txt') is False:
     newopen = open('./Collected_flags.txt', 'a')
-    newopen.write("All_reads" + '\t' + "Total_Mappend" + '\t' + "Total_Mappend%" + '\t' + "Proper_mapped" + '\t'
+    newopen.write("Library" + '\t' + "All_reads" + '\t' + "Total_Mappend" + '\t' + "Total_Mappend%" + '\t' + "Proper_mapped" + '\t'
                   + "Proper_mapped%" + '\t' + "Other_Chrom" + '\n')
     newopen.close()
 
