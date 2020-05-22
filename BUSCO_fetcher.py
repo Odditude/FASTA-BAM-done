@@ -22,3 +22,15 @@ for line in fp:
 
 fp.close()
 newopen.close()
+
+
+'''
+To run on multple files:
+
+#!/bin/bash
+
+for file in ./busco_*/short_summary.specific.fabales_odb10.*
+do
+    python BUSCO_fetcher.py $file
+done
+'''
