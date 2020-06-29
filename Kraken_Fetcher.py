@@ -9,6 +9,7 @@ def get_unwanted_gene(a, b, c):
     :param c: Output file, see return
     :return: File with genes with unwanted species annotations.
     """
+    wanted_fractions = "3193:"
     gene_taxi_file = open(a)
     gene_taxi_lines = gene_taxi_file.readlines()
     wanted_taxi = b
@@ -24,6 +25,14 @@ def get_unwanted_gene(a, b, c):
             gene = gene_taxi.split("\t")[1]
             newline = gene + '\n'
             wanted_reads.write(newline)
+        else:
+            taxi_fractions = gene_taxi.split("\t")[4]
+            if wanted_fractions in taxi_fractions:
+                new_counter += 1
+                gene = gene_taxi.split("\t")[1]
+                newline = gene + '\n'
+                wanted_reads.write(newline)
+
     print("Sequences in total: " + str(counter))
     print("Wanted sequences: " + str(new_counter))
     gene_taxi_file.close()
