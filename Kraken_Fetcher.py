@@ -3,7 +3,8 @@ import sys
 
 def get_unwanted_gene(a, b, c):
     """
-    Prepares a file of unwanted genes, these genes does not have the approved  taxi.
+    Prepares a file of wanted genes, these genes have the approved  taxies.
+    It is a soft filter approach, allowing for gens with minimum 1 k-mer from a wanted taxi. 
     :param a: File with two columns: Gene, taxi
     :param b: List of allowed taxi
     :param c: Output file, see return
