@@ -46,7 +46,7 @@ def get_unwanted_gene(a, b, c):
 #=========#
 
 wanted_taxi = ['0', '3193']
-gene_list = sys.argv[1]
-wanted_genes = sys.argv[2]
+kraken_file = sys.argv[1]
+output = sys.argv[2]
 
-get_unwanted_gene(gene_list, wanted_taxi, wanted_genes)
+get_unwanted_gene(kraken_file, wanted_taxi, output)
