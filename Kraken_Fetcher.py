@@ -5,10 +5,10 @@ def get_unwanted_gene(a, b, c):
     """
     Prepares a file of wanted genes, these genes have the approved  taxies.
     It is a soft filter approach, allowing for gens with minimum 1 k-mer from a wanted taxi. 
-    :param a: File with two columns: Gene, taxi
+    :param a: Kraken file
     :param b: List of allowed taxi
     :param c: Output file, see return
-    :return: File with genes with unwanted species annotations.
+    :return: File with genes with wanted species annotations.
     """
     wanted_fractions = "3193:"
     gene_taxi_file = open(a)
